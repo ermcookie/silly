@@ -2,13 +2,13 @@
 case $1 in 
 # go to
 home)
-cd $home
+cd "$HOME"
 ;;
 downloads)
 cd ~/Downloads
 ;;
 # misc
-silly)
+cow)
 uwusay
 ;;
 system)
@@ -16,6 +16,16 @@ hyfetch
 ;;
 say)
 echo $2
+;;
+bark)
+echo "the existence of weed and edibles throws into haywire the question of marriage not being eternal because you chose to embark on it in life - iharen"
+;;
+meow)
+echo "erm... this isnt working, im going toswitch back to arch"
+;;
+credits)
+echo "https://ko-fi.com/ermcookie
+discord:co.ok.ie"
 ;;
 # package utils
 paclist)
@@ -26,6 +36,9 @@ sudo pacman -S $2
 ;;
 pacremove)
 sudo pacman -Rns $2
+;;
+pacconfig)
+sudo nano /etc/pacman.conf
 ;;
 sysupdate)
 sudo pacman -Syu
@@ -74,4 +87,4 @@ sudo cp $file1 $file2
 echo "file copied! :3"
 ;;
 esac
-exec bash
+$SHELL
