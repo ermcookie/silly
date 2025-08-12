@@ -49,10 +49,8 @@ echo "created aur folder"
 ;;
 aur-install)
 cd ~/aur
-echo "enter package name: "
-read aurname
-git clone https://aur.archlinux.org/$aurname.git
-cd $aurname
+git clone https://aur.archlinux.org/$2.git
+cd $2
 makepkg -si
 ;;
 #text utils
