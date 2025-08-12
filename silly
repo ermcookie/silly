@@ -32,10 +32,10 @@ paclist)
 sudo pacman --query
 ;;
 pacinstall)
-sudo pacman -S $2
+sudo pacman -S ${@: +2}
 ;;
 pacremove)
-sudo pacman -Rns $2
+sudo pacman -Rns ${@: +2}
 ;;
 pacconfig)
 sudo nano /etc/pacman.conf
@@ -70,7 +70,7 @@ sudo $editor $file
 ;;
 copy)
 echo "source: "
-read file1
+read file12
 echo "destination: "
 read file2
 cp $file1 $file2
