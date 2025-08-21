@@ -1,0 +1,6 @@
+packages
+  install scripts
+package manager
+  basic package install
+  basic packare remove
+  basic package list/query
