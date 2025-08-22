@@ -12,7 +12,7 @@ do
 
 id=$(grep $pkg-v $pkglist | head -n 1)
 
-[ -z $id ] && echo "Package not found: $pkg" && exit
+[ -z $id ] && echo "Package not found: $pkg" && exit 1
 
 ball=$id.tbz2
 
